@@ -1,0 +1,343 @@
+
+/*  RESET Y ESTILOS BASE */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #222;
+  background: #fafafa;
+  padding-top: 60px; /* espacio para banner fijo */
+}
+
+h1, h2 {
+  color: #0d3347;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: #333; /* refuerza el contraste */
+}
+
+
+/*  BANNER Y HEADER */
+
+.banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #0d47a1;
+  color: #fff;
+  text-align: center;
+  padding: 8px 10px;
+  z-index: 9999;
+}
+
+.site-header, header {
+  max-width: 1100px;
+  margin: 70px auto 20px;
+  padding: 10px;
+}
+
+header .logo img {
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+
+/*  MENÚ DE NAV   */
+
+nav .menu {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+nav .menu a {
+  text-decoration: none;
+  color: inherit;
+  padding: 4px 6px;
+}
+
+nav .menu a.activo {
+  color: #d9534f;
+  border-bottom: 3px solid #d9534f;
+}
+
+/* Estilo destacado para enlace activo */
+a[data-page="index"] {
+  font-weight: 600;
+}
+
+
+/* RELOJ Y BIENVENIDA   */
+
+#reloj {
+  font-family: "Courier New", monospace;
+  display: inline-block;
+  padding: 6px 10px;
+  background: #111;
+  color: #fff;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+/* 💬 Estilo para el saludo dinámico */
+#saludo {
+  font-size: 1.2rem;
+  color: #0d47a1;
+  font-weight: bold;
+}
+
+
+/* 🎨 CAMBIO DE COLOR DE TEXTO */
+
+#texto {
+  transition: color 0.3s ease-in-out;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+#btnRojo, #btnVerde, #btnAzul {
+  padding: 8px 12px;
+  margin-right: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+#btnRojo {
+  background: #ffcdd2;
+  color: #b71c1c;
+}
+#btnVerde {
+  background: #c8e6c9;
+  color: #1b5e20;
+}
+#btnAzul {
+  background: #bbdefb;
+  color: #0d47a1;
+}
+
+#btnRojo:hover, #btnVerde:hover, #btnAzul:hover {
+  opacity: 0.8;
+}
+
+
+/* 🧾 CONTADOR DE VISITAS */
+
+#contador {
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+
+/*  TARJETAS Y COMPONENTES */
+
+.arjeta, .arreglo-articulos, .tarjeta {
+  margin: 12px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  background: #fff;
+}
+
+.arreglo-articulos .arjeta {
+  margin-bottom: 16px;
+}
+
+.badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #ff5722;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+
+/* 📝 FORMULARIOS    */
+
+form {
+  max-width: 700px;
+  background: #fff;
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+}
+
+form input, form select, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+form input:focus, form select:focus, form textarea:focus {
+  border-color: #0d47a1;
+  box-shadow: 0 0 0 3px rgba(13,71,161,0.08);
+}
+
+
+/* TABLAS Y GALERÍAS */
+
+.ref-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ref-table th, .ref-table td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.ref-table tbody tr:nth-child(even) {
+  background: #f3f3f3;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* MEDIA QUERIES   */
+
+@media (max-width: 1024px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  nav .menu {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+
+/* CASCADA Y ESPECIFICIDAD   */
+
+.texto-especial p {
+  color: #00796b;
+}
+
+#override p {
+  color: #c62828;
+}
+
+
+/* ACCESIBILIDAD */
+
+:focus {
+  outline: 3px solid #80bdff;
+  outline-offset: 2px;
+}
+.arjeta ul,
+.arjeta ol {
+  list-style: none;   /* quita viñetas y números */
+  padding-left: 0;    /* elimina sangría por defecto */
+  margin: 0.5em 0;    /* opcional: ajusta espaciado */
+}
+
+.arjeta li {
+  margin: 0.3em 0;    /* espacio entre items */
+}
+.arjeta ul li::before {
+  content: "✔ ";
+  color: green;
+  font-weight: bold;
+}
+.arjeta ul,
+.arjeta ol {
+  list-style: none;   /* sin viñetas */
+  padding-left: 0;    /* sin sangría */
+  margin: 0.5em auto; /* auto = centrado horizontal */
+  text-align: center; /* centra el contenido de los <li> */
+}
+
+.arjeta li {
+  margin: 0.3em 0;
+}
+.arjeta ul,
+.arjeta ol {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centra horizontal */
+  gap: 0.4em;          /* espacio entre ítems */
+}
+
+.arjeta li {
+  text-align: center;
+}
+.arjeta img {
+  display: block;       /* quita el inline por defecto */
+  margin: 0 auto;       /* centra horizontal */
+  max-width: 100%;      /* que no se pase del ancho del contenedor */
+  height: auto;         /* mantiene proporción */
+}
+/* Centrar todo el texto */
+body {
+  text-align: center;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Centrar el header y logo */
+.site-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centra horizontal */
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Menú centrado */
+.menu {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* centra horizontal */
+  gap: 20px;
+}
+
+.menu li {
+  display: inline;
+}
+
+/* Botones alineados */
+button {
+  margin: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+

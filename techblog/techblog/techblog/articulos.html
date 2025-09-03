@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TechBlog — Artículos técnicos sobre seguridad, frontend y redes.">
+  <title>TechBlog - Artículos</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <div class="banner"> TechBlog — Articulos</div>
+
+  <header>
+    <h1>Artículos</h1>
+    <nav aria-label="Menú">
+      <ul class="menu">
+        <li><a href="index.html" data-page="index">Inicio</a></li>
+        <li><a href="articulos.html" data-page="articulos">Artículos</a></li>
+        <li><a href="recursos.html" data-page="recursos">Recursos</a></li>
+        <li><a href="contacto.html" data-page="contacto">Contacto</a></li>
+       
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="arreglo-articulos">
+      <!-- Article 1: usa UL -->
+      <div class="arjeta" style="position:relative;">
+        <span class="badge">Nuevo</span>
+        <article>
+          <h2>Seguridad web moderna</h2>
+          <p>La seguridad en aplicaciones web es crítica. SSL/TLS, autenticación y validación son pilares.</p>
+          <p>Aprender buenas prácticas evita vulnerabilidades y pérdidas de datos.</p>
+          <img src="img/seguridad.png" alt="Icono de seguridad" width="400">
+          <ul>
+            <li>HTTPS/SSL</li>
+            <li>Validación de entradas</li>
+            <li>Control de acceso</li>
+          </ul>
+        </article>
+      </div>
+
+      <!-- Article 2: usa OL -->
+      <div class="arjeta" style="position:relative;">
+        <article>
+          <h2>Desarrollo Frontend moderno</h2>
+          <p>Frameworks y patrones: componentes, accesibilidad y performance.</p>
+          <p>Herramientas para optimizar el flujo de trabajo: bundlers y linters.</p>
+          <img src="img/fronted.png" alt="Computadora con código" width="400">
+          <ol>
+            <li>HTML semántico</li>
+            <li>CSS modular y variables</li>
+            <li>JavaScript responsable</li>
+          </ol>
+        </article>
+      </div>
+
+      <!-- Article 3: usa UL u OL (aquí usamos UL de nuevo según requerimiento "cualquiera") -->
+      <div class="arjeta" style="position:relative;">
+        <article>
+          <h2>Redes y protocolos esenciales</h2>
+          <p>Una buena comprensión de TCP/IP y HTTP es esencial para debugging y arquitectura.</p>
+          <p>Modelos OSI y práctica ayudan en el análisis de tráfico y diseño de infraestructuras.</p>
+          <img src="img/redes.png" alt="Diagrama de red" width="400">
+          <ul>
+            <li>Direccionamiento IP</li>
+            <li>Enrutamiento</li>
+            <li>Seguridad perimetral</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 TechBlog Interactivo</p>
+  </footer>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>

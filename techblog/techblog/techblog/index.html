@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TechBlog Interactivo — Inicio: blog académico sobre tecnología, noticias y recursos.">
+  <title>TechBlog Interactivo - Inicio</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <div class="banner" role="banner"> TechBlog </div>
+
+  <header class="site-header" role="banner">
+    <div class="logo" aria-label="TechBlog logo">
+      <img src="img/logo.jpg" alt="Logo TechBlog" width="72">
+      <h1>TechBlog Interactivo</h1>
+    </div>
+
+    <nav role="navigation" aria-label="Menú principal">
+      <ul class="menu">
+        <li><a href="index.html" data-page="index">Inicio</a></li>
+        <li><a href="articulos.html" data-page="articulos">Artículos</a></li>
+        <li><a href="recursos.html" data-page="recursos">Recursos</a></li>
+        <li><a href="contacto.html" data-page="contacto">Contacto</a></li>
+    
+      </ul>
+    </nav>
+
+    <div id="reloj" aria-live="polite"></div>
+  </header>
+
+  <main>
+    <section id="intro" aria-labelledby="intro-title">
+      <h2 id="intro-title">Evolución de la Web</h2>
+      <p><strong>Web 1.0:</strong> Páginas estáticas, lectura. Contenido creado por pocos.</p>
+      <p><strong>Web 2.0:</strong> Interactividad y redes sociales — contenido generado por usuarios, APIs.</p>
+      <p><strong>Web 3.0:</strong> Semántica, descentralización y personalización mediante datos enlazados y blockchain (visión actual).</p>
+    </section>
+
+    <section id="saludo-section" aria-labelledby="saludo-title">
+      <h2 id="saludo-title">Bienvenida</h2>
+      <p id="saludo" role="status"></p>
+    </section>
+
+    <section aria-labelledby="visitas-title">
+      <h2 id="visitas-title">Contador de visitas</h2>
+      <button id="btnVisitas" aria-pressed="false">Registrar visita</button>
+      <p>Total de visitas: <span id="contador">0</span></p>
+    </section>
+
+    <section aria-labelledby="texto-title">
+      <h2 id="texto-title">Interactividad de color</h2>
+      <p id="texto">Este párrafo cambiará de color cuando hagas clic en los botones.</p>
+      <button id="btnRojo">Rojo</button>
+      <button id="btnVerde">Verde</button>
+      <button id="btnAzul">Azul</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      <a href="https://github.com/tuUsuario/TechBlog-Interactivo" target="_blank" rel="noopener">Repositorio GitHub</a> |
+      <a href="https://developer.mozilla.org" target="_blank" rel="noopener">MDN Web Docs</a>
+    </p>
+  </footer>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>
+
