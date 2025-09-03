@@ -30,17 +30,17 @@ Carlos Rodriguez  — 2025
 Capturas
 
 
-![index](/capturas/index.png)
+![index](techblog/capturas/index.png)
 
 
 
-![acerca](/capturas/articulo.png)
+![acerca](techblog/capturas/articulo.png)
 
 
-![articulo1](/capturas/contacto.png)
+![articulo1](techblog/capturas/contacto.png)
 
 
-![contactos](/capturas/recursos.png)
+![contactos](techblog/capturas/recursos.png)
 
 
 
