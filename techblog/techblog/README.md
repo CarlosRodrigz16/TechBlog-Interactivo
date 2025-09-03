@@ -34,7 +34,7 @@ Capturas
 
 
 
-![acerca](techblog/capturas/articulo.png)
+![acerca](techblog/capturas/articulos.png)
 
 
 ![articulo1](techblog/capturas/contacto.png)
